@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>temperature</title>
+</head>
+<body>
+<script>
+    let Temperature = function (c) {
+        this.c = c;
+        this.getconvertF = function () {
+            return (1.8 * c) +32;
+        };
+        this.getconvertKenvin = function () {
+            return c + 273.15;
+        };
+        this.setConvertC = function (newConvertC) {
+            this.ConvertC = newConvertC;
+        }
+    };
+    let temperature = new Temperature(25);
+    alert("đổi sang độ f là : " + temperature.getconvertF());
+    alert("đổi sang độ kenvin là : " + temperature.getconvertKenvin());
+temperature();
+</script>
+</body>
+</html>
